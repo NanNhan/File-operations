@@ -1,0 +1,10 @@
+#include<stdio.h>
+int main()
+{
+	int a = 10000;
+	FILE* pf = fopen("test.txt","wb");//W:write  b:二进制
+	fwrite(&a,4,1,pf);//二进制的形式写到文件中,数据来自a，写一个四个字节的数据，放到pf中。
+	fclose(pf);
+	pf = NULL;
+	return 0;
+}
